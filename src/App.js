@@ -5,7 +5,6 @@ import './App.css';
 // TODO:
 // 1. loop through list all display name
 // 2. search to filter by name (display the venue name)
-//
 
 function App() {
   const [venues, getVenues] = useState('');
