@@ -1,0 +1,12 @@
+.venue-container {
+  display: flex;
+  justify-content: center;
+}
+
+.venue-form {
+  display: flex;
+}
+
+.venue-form input {
+  margin-left: 10px;
+}

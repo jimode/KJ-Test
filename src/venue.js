@@ -5,7 +5,7 @@ const Venue = ({ venues }) => {
 
   if (venues.length > 0) {
     return (
-      <div className="venue-container">
+      <div className="venue-list">
         {venues
           .filter((venue) =>
             venue.name.toLowerCase().includes(filter.toLowerCase())
@@ -16,7 +16,7 @@ const Venue = ({ venues }) => {
             </div>
           ))}
 
-        <div>
+        <div className="venue-form">
           <label htmlFor="filterInput">Filter Venues</label>
           <input
             id="filterInput"
