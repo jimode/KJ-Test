@@ -8,7 +8,6 @@ import './App.css';
 
 function App() {
   const [venues, getVenues] = useState('');
-  const [venueName, setVenueName] = useState('');
 
   useEffect(() => {
     getAllVenues();
@@ -24,27 +23,9 @@ function App() {
       .catch((error) => console.log('Error:', error));
   };
 
-  const handleChange = (e) => {
-    setVenueName(e.target.value.toLowerCase());
-
-    const filteredVenue = venues.filter((venue) =>
-      venue.name.toLowerCase().includes(venueName)
-    );
-    getVenues(filteredVenue);
-  };
-
   return (
     <div className="venue-container">
       <Venue venues={venues} />
-      <div>
-        <label htmlFor="filterInput">Filter Venues</label>
-        <input
-          id="filterInput"
-          type="text"
-          onChange={handleChange}
-          value={venueName}
-        />
-      </div>
     </div>
   );
 }
